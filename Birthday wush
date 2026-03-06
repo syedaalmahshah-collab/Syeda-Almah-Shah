@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday! ✨</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe4e1; /* Soft Pink */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            color: #d81b60;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 400px;
+            margin-top: 50px;
+            padding: 20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            animation: fadeIn 2s ease-in;
+        }
+
+        h1 { font-size: 24px; margin-bottom: 10px; }
+        
+        .photo-placeholder {
+            width: 150px;
+            height: 150px;
+            background: #fce4ec;
+            border-radius: 50%;
+            margin: 20px auto;
+            border: 5px solid #ff80ab;
+            overflow: hidden;
+        }
+
+        .letter-box {
+            display: none; /* Pehle chhupa hua hoga */
+            background: #fff9fb;
+            padding: 15px;
+            border: 1px dashed #ff80ab;
+            margin-top: 20px;
+            border-radius: 10px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            background-color: #ff80ab;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .btn:hover { background-color: #f06292; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="photo-placeholder">
+            <img src="https://via.placeholder.com/150" alt="Birthday Person" style="width:100%;">
+        </div>
+        
+        <h1>Happy Birthday, [Name]! 🎂</h1>
+        <p>Today is all about YOU! ✨</p>
+
+        <button class="btn" onclick="showLetter()">Click to Open Letter 💌</button>
+
+        <div id="letter" class="letter-box">
+            <p>Pyaari/Pyaare [Name],</p>
+            <p>Main bas ye batana chahta hoon ke tum meri life ka sab se haseen hissa ho. Hamesha aise hi muskurate raho! ❤️</p>
+            <p><b>Love Always!</b></p>
+        </div>
+        
+        <br>
+        <a href="https://open.spotify.com" target="_blank">
+            <button class="btn" style="background:#1DB954">Play Our Song 🎵</button>
+        </a>
+    </div>
+
+    <script>
+        function showLetter() {
+            var x = document.getElementById("letter");
+            x.style.display = "block";
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+    </script>
+
+</body>
+</html>
